@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Joules Frontend Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to Run this Project Locally
 
-## Available Scripts
+1. Fork the Repo
+2. Clone the Repo to your Machine
+3. Open the project in your Terminal
+4. Run "npm i"
+5. Run "npx json-server --watch data/db.json --port 8000" to start the dummy server
+6. Run "npm run start"
 
-In the project directory, you can run:
+The project should open on localhost:3000
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The task is to consume the attached JSON file (to simulate an API response) and display the resulting data according to the attached wireframe. We will not be judging you on completion time, so how you dedicate your time is up to you, there is no rush, just make sure you’ve completed it before we meet to talk it through in a first stage interview.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The layout should loosely match the provided wireframe, but please don’t feel restricted by this – we're always looking for new ways to do things, so as long as you can explain your decisions, we’re all ears!
 
-### `npm test`
+The look and feel is up to you but maybe you’ll want to take inspiration from the Joules branding and your interpretation of what would be right for a Joules customer.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We like to have a mobile-first approach, so the site should use responsive techniques to ensure that it works on a range of screen sizes but also is cross browser compatible.
 
-### `npm run build`
+The page should be built using HTML, CSS (SCSS encouraged) and JavaScript(utilising React where appropriate).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Extra Considerations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you feel like going the extra mile, here is a list of other things you might want to consider, either implemented or scoped.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Filter By options
+* Sort By options
+* Load More style pagination
+* Quick View functionality
+* How would you test your code and functionality? (unit tests, e2e)
+* Being in retail, SEO is very important to us, so any techniques you can demonstrate would be great
 
-### `npm run eject`
+We’d like to see how you write code so try and keep it simple, but do not be afraid to add some flair to show off what you can do.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ideally you would upload your repository to Github or similar, but a zip file is fine.
