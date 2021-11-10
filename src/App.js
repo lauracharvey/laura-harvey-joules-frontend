@@ -1,10 +1,12 @@
 import './App.scss';
 import Home from './Home';
+import Navbar from './Navbar';
 
 function App() {
-  return (
+  return <>
+    <Navbar />
     <Home />
-  );
+  </>
 }
 
 export default App;

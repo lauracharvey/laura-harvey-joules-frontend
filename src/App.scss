@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,6 +8,118 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #322744;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #4d5152;
+}
+
+.content {
+    margin-top: 45px;
+    padding: 20px;
+}
+
+a, a:visited {
+    color: #4d5152;
+    text-decoration: none;
+
+}
+
+.navbar-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #ffffff;
+    border-bottom: solid 1.8px #ccc;
+
+    .navbar-inner:first-child {
+        justify-content: start;
+    }
+
+    .navbar-inner {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .logo {
+            width: 50px;
+        }
+
+        .bm-burger-button {
+            position: relative;
+            width: 22px;
+            height: 15px;
+        }
+        
+        .bm-burger-bars {
+            background: #111;
+            height: 14%;
+        }
+        
+        .bm-burger-bars-hover {
+            cursor: pointer;
+        }
+        
+        .bm-cross-button {
+            height: 24px;
+            width: 24px;
+        }
+        
+        .bm-cross {
+            background: #bdc3c7;
+        }
+        
+        .bm-menu-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+          
+        .bm-menu {
+            background: #ffffff;
+            font-size: 1.15em;
+        }
+          
+        .bm-morph-shape {
+            fill: #373a47;
+        }
+          
+        .bm-item-list {
+            color: #b8b7ad;
+        }
+          
+        .bm-item {
+            display: inline-block;
+        }
+          
+        .menu-item {
+            padding: 10px;
+            border-top: solid 1px #ccc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .menu-item:first-child {
+            margin-top: 40px;
+            border-top: none;
+        }
+          
+        .bm-overlay {
+            top: 0;
+            left: 0;
+            background: #0000004d;
+        }
+    }
+}
+
+.breadcrumbs {
+    text-transform: uppercase;
 }

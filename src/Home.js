@@ -16,7 +16,7 @@ const Home = () => {
     console.log(products)
 
     return (
-        <div className="home">
+        <div className="content">
             <h2 className="title">Your Products</h2>
             { products && <Products products={products} />}
         </div>
