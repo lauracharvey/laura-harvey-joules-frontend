@@ -11,6 +11,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     color: #4d5152;
+    letter-spacing: 1px;
 }
 
 .content {
@@ -21,7 +22,11 @@ body {
 a, a:visited {
     color: #4d5152;
     text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+    color: #dc218a;
 }
 
 .navbar-outer {
@@ -29,11 +34,11 @@ a, a:visited {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 45px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 10px;
     background: #ffffff;
     border-bottom: solid 1.8px #ccc;
 
@@ -46,9 +51,11 @@ a, a:visited {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        font-size: 20px;
+        color: #111;
 
         .logo {
-            width: 50px;
+            width: 60px;
         }
 
         .bm-burger-button {
@@ -102,9 +109,8 @@ a, a:visited {
         .menu-item {
             padding: 10px;
             border-top: solid 1px #ccc;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             font-size: 14px;
+            text-transform: uppercase;
         }
         
         .menu-item:first-child {
@@ -121,5 +127,54 @@ a, a:visited {
 }
 
 .breadcrumbs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 10px;
     text-transform: uppercase;
+}
+
+.products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .product-card-outer {
+        width: calc(50% - 5px);
+
+        .product-card-inner {
+            img {
+                width: 100%;
+            }
+
+            .product-title, .product-price {
+                font-weight: 600;
+                font-size: 12px;
+                color: #1a1a1a;
+            }
+
+            .product-brand {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.title-wrapper {
+    margin: auto;
+    text-align: center;
+    color: #111;
+
+    h1 {
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin: 20px 0 10px 0;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
 }

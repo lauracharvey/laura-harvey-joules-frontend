@@ -1,24 +1,14 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Products from './Products'
+import { Link } from "react-router-dom";
+import Title from "./Title";
 
 const Home = () => {
-    const [products, getProducts] = useState(null)
-
-
-    useEffect(() => {
-        axios.get('http://localhost:8000/products')
-          .then(axiosResp => {
-            getProducts(axiosResp.data)
-          })
-      }, [])
-
-    console.log(products)
+  const title = "Home"
+  const description = "This is a dummy homepage, please click the link below to see an example products page"
 
     return (
         <div className="content">
-            <h2 className="title">Your Products</h2>
-            { products && <Products products={products} />}
+          <Title title={title} description={description}/>
+          <Link to="/women">Go to Products Page</Link>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 const Breadcrumbs = () => {
     return <section className="breadcrumbs">
         <div>
-            <p>example > breadcrumb > here </p>
+            <p>example / breadcrumb / here </p>
         </div>
     </section>
 }
