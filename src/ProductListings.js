@@ -2,6 +2,8 @@ const ProductListings = ({ products, loading }) => {
     if (loading) {
       return <h2>Loading...</h2>;
     }
+
+    console.log(products)
   
     return (<>
     <div className="products-wrapper">

@@ -8,7 +8,9 @@ const Home = () => {
     return (
         <div className="content">
           <Title title={title} description={description}/>
-          <Link to="/women">Go to Products Page</Link>
+          <div className="products-link">
+            <Link to="/women">Go to Products Page</Link>
+          </div>
         </div>
     )
 }
