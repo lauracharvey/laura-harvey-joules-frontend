@@ -48,9 +48,14 @@ I have added a dummy home page as I wanted to simulate routing and how the app m
 
 I added pagination however, it isn't a "load more" style and it is a little big buggy and I don't think it would scale well in a full stack application (where you would likely deal with pagination on the backend instead), if I had more time I would have implemented this with the "load more" functionality rather than numbered pages.
 
+### Breadcrumbs
+
+I didn't see much worth in adding breadcrumbs in this instance due to the simple navigation but I would look to implement these next.
+
 ### Testing
 
 I've never worked in a test driven environment and unsure where to start with testing so rather than rush and make a bad job of it, I decided it was out of the scope of my current capabilities for this particular project. It's something I plan to learn whilst on leave.
 
+### Formatting
 
-
+I'm currently working on a 2012 macbook with an older version of VS Code, I have tried where possible to format nicely but if you come across anything that isn't quite right, that's why.
