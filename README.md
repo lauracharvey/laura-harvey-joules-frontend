@@ -7,7 +7,7 @@
 3. Open the project in your Terminal
 4. Run "npm i"
 5. Run "npx json-server --watch data/db.json --port 8000" to start the dummy server
-6. Run "npm run start"
+6. Run "npm run start" to start the development server
 
 The project should open on localhost:3000
 
@@ -37,3 +37,20 @@ If you feel like going the extra mile, here is a list of other things you might 
 We’d like to see how you write code so try and keep it simple, but do not be afraid to add some flair to show off what you can do.
 
 Ideally you would upload your repository to Github or similar, but a zip file is fine.
+
+## Stretch Goals
+
+### Home Page / Routing
+
+I have added a dummy home page as I wanted to simulate routing and how the app might scale. 
+
+### Pagination
+
+I added pagination however, it isn't a "load more" style and it is a little big buggy and I don't think it would scale well in a full stack application (where you would likely deal with pagination on the backend instead), if I had more time I would have implemented this with the "load more" functionality rather than numbered pages.
+
+### Testing
+
+I've never worked in a test driven environment and unsure where to start with testing so rather than rush and make a bad job of it, I decided it was out of the scope of my current capabilities for this particular project. It's something I plan to learn whilst on leave.
+
+
+
