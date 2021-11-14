@@ -1,8 +1,7 @@
 import './App.scss';
-import Home from './Home';
 import Navbar from './Navbar';
-import Products from './Products'
-import Product from './Product';
+import Home from './Home'
+import Products from './Products';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,12 +13,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/women" element={<Products/>}></Route>
-            <Route path=":url" element={<Product/>}></Route>
+            <Route path="/!" element={<Products/>}></Route>
           </Routes>
         </div>
       </div>
     </Router>
-  )
+    )
 }
 
 export default App;

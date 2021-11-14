@@ -1,44 +1,46 @@
+import { useState, useEffect } from 'react';
+import ProductListings from './ProductListings';
+import Pagination from './Pagination';
+import axios from 'axios';
 import Breadcrumbs from "./Breadcrumbs";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
 import Title from "./Title";
 
 const Products = () => {
-    const [products, getProducts] = useState(null)
-    const title = "All Women's Clothing"
-    const description = "From colourful styles that will brighten up your day (and your wardrobe) to pieces that have been made with the busy everyday in mind, our collection of women's clothing is practical, stylish and always fun."
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(12);
 
-    useEffect(() => {
-        axios.get('http://localhost:8000/products')
-          .then(resp => {
-            getProducts(resp.data)
-          })
-      }, [])
+  const title = "All Women's Clothing"
+  const description = "From colourful styles that will brighten up your day (and your wardrobe) to pieces that have been made with the busy everyday in mind, our collection of women's clothing is practical, stylish and always fun."
 
-    console.log(products)
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      const res = await axios.get('http://localhost:8000/products');
+      setProducts(res.data);
+      setLoading(false);
+    };
 
-    return (<>
-    <Breadcrumbs />
-    <Title title={title} description={description}/>
-    <div className="products-wrapper">
-        {products && products.map((product, index) => {
-            return <div className="product-card-outer" key={index}>
-                <div className="product-card-inner">
-                    <Link to={product.url}>
-                        <div>
-                            <img src={product.images[0].url} alt={product.name}/>
-                        </div>
-                        <p className="product-title">{product.name} {product.summary}</p>
-                    </Link>
-                        <p className="product-brand">by {product.shop.name}</p>
-                        <p className="product-price">{product.price.formattedValue}</p>
-                </div>
-                </div>
-            })}
-            </div>
-            </>
-    )
-}
- 
+    fetchProducts();
+  }, []);
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
+  return (<>
+        <Breadcrumbs />
+        <Title title={title} description={description} />
+        <ProductListings products={currentProducts} loading={loading} />
+        <Pagination
+            productsPerPage={productsPerPage}
+            totalProducts={products.length}
+            paginate={paginate}
+        />
+  </>)
+};
+
 export default Products;
